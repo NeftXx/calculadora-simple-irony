@@ -1,0 +1,6 @@
+# EditorConfig: http://EditorConfig.org
+
+# tab indentation
+[*.{cs}]
+indent_style = space
+indent_size = 4
