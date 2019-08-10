@@ -21,9 +21,11 @@ namespace Calculadora.Analizador
             MULT.Rule = E + ToTerm("*") + E;
             DIV.Rule = E + ToTerm("/") + E;
 
-            RegisterOperators(1, "+", "-");//ESTABLESEMOS PRESEDENCIA
+            // Establecer precedencia
+            RegisterOperators(1, "+", "-");
             RegisterOperators(2, "*", "/");
 
+            // Remover nodos que no son de utilidad
             MarkTransient(E);
 
             Root = E;
